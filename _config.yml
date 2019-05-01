@@ -1,1 +1,6 @@
-theme: jekyll-theme-cayman
+---
+- hosts: '{{ host }}'
+  become: true
+  tasks:
+  - name: ping pong
+    command: ping -c 8 google.com 
